@@ -613,6 +613,27 @@ nav:hover > .nav-content {
   color: var(--main-blue);
   font-weight: 700;
 }
+.sld-table .td-yellow {
+  background-color: #ffd264;
+}
+.sld-table .td-lgreen {
+  background-color: #b8e0cd;
+}
+.sld-table .td-dgreen {
+  background-color: #58bc8a;
+}
+.sld-table .td-green {
+  background-color: #b3c976;
+}
+.sld-table .td-red {
+  background-color: #ec7774;
+}
+.sld-table .td-orange {
+  background-color: #f6b06b;
+}
+.sld-table .td-height {
+  height: 3rem;
+}
 .sld-table td {
   font-size: 1.5rem;
   color: var(--main-blue);
@@ -624,7 +645,19 @@ nav:hover > .nav-content {
 .table-striped > tbody > tr:nth-of-type(odd) > * {
   --bs-table-accent-bg: var(--main-bg);
 }
-
+.sld-table-formula {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 2.5rem 0 0 0;
+}
+.sld-table-formula h5 {
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+}
 /* LOGIN */
 .login {
   width: 100%;
