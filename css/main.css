@@ -852,10 +852,37 @@ nav:hover > .nav-content {
   font-size: 1.5rem;
   margin: 0 0.25rem 0 0;
 }
+.driver-manage-table .sld-table tr .td-icon-b {
+  font-weight: 700;
+}
+.driver-manage-table .sld-table tr .td-icon-b i {
+  font-size: 1.5rem;
+  margin: 0 0.25rem 0 0;
+  color: #009866;
+}
+.driver-manage-table .sld-table tr .td-icon-r {
+  font-weight: 700;
+}
+.driver-manage-table .sld-table tr .td-icon-r i {
+  font-size: 1.5rem;
+  margin: 0 0.25rem 0 0;
+  color: red;
+}
+.driver-manage-table .sld-table tr .td-r-icon i {
+  font-size: 1.5rem;
+  margin: 0 0 0 0.25rem;
+  color: red;
+}
 .driver-manage-table .sld-table tr td h6 {
   color: #748290;
   font-size: 1.2rem;
   font-weight: 400;
+  margin: 0.5rem 0 0 0;
+}
+.driver-manage-table .sld-table tr td h6 i {
+  color: #748290 !important;
+  font-size: 1.25rem;
+  margin: 0 0.5rem 0 0;
 }
 .td-status span {
   font-size: 1.15rem;
@@ -864,6 +891,14 @@ nav:hover > .nav-content {
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
   background-color: #009866;
+}
+.td-status-h span {
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #6c40bc;
 }
 .td-status-c span {
   font-size: 1.15rem;
@@ -976,4 +1011,131 @@ tr span i {
   height: max-content;
   transition: var(--trns2);
   margin: 1.5rem 0 0 0;
+}
+
+/* OVERVIEW PAGE  */
+.overview-main-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2rem;
+}
+.search-select-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.search-select-heading h5 {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+}
+.search-select-heading .search-box {
+  width: 100%;
+}
+.search-select-heading select {
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.035);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--main-blue);
+  padding: 0.85rem 1rem;
+  border-radius: 0.5rem;
+  border: 0;
+  transition: var(--trns1);
+}
+.search-select-heading select option {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--main-blue);
+}
+
+/* PACKAGEHUB PAGE  */
+.hub-pack-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0 2.5rem 0;
+}
+.hub-pack-btn .quest-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background-color: #062544;
+  border-radius: 0.5rem;
+  margin: 0 0.75rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  border: unset;
+  cursor: not-allowed;
+}
+.hub-pack-btn .quest-btn i {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 0.75rem 0 0;
+}
+.hub-pack-btn .quest-btn:hover {
+  background-color: rgba(6, 37, 68, 0.8);
+  transition: 0.5s;
+}
+.hub-pack-btn select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  background-color: #062544;
+  border-radius: 0.5rem;
+  margin: 0 0.75rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  border: unset;
+  cursor: pointer;
+  width: 10rem;
+}
+.hub-pack-btn option i {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 0.75rem 0 0;
+}
+.hub-pack-btn select option {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+}
+.hub-pack-btn .quest-btn:hover {
+  background-color: rgba(6, 37, 68, 0.9);
+  transition: 0.5s;
+}
+.driver-manage-table .sld-table tr td .icon-para-green {
+  color: #009866;
+}
+.driver-manage-table .sld-table tr td .icon-para-green i {
+  color: #009866 !important;
+}
+.driver-manage-table .sld-table .pack-hub-thead th i {
+  font-size: 1.25rem;
+  color: #6c757d;
+  margin: 0 0 0 2rem;
+  cursor: pointer;
+}
+.driver-manage-table .sld-table .pack-hub-thead .mar-none i {
+  margin: 0;
+}
+.driver-manage-table .sld-table tr td .icon-para-yellow {
+  color: #ffc107;
+}
+.driver-manage-table .sld-table tr td .icon-para-yellow i {
+  color: #ffc107 !important;
+}
+.driver-manage-table .sld-table tr td .icon-para-red {
+  color: #dc3545;
+}
+.driver-manage-table .sld-table tr td .icon-para-red i {
+  color: #dc3545 !important;
 }
