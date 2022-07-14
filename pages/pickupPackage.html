@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | SLDelivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+    <div class="app light-theme">
+        <main class="page">
+            <nav>
+                <div class="nav-content">
+                    <div class="nav-top">
+                        <div class="sld-logo-box">
+                            <img src="../assets/img/logo.png" alt="logo" />
+                            <span>SLDelivery</span>
+                        </div>
+                    </div>
+                    <div class="nav-links-container overflow-bar">
+                        <div class="nav-link-box">
+                            <p>
+                                <i class="bi bi-speedometer2"></i>
+                                <span>Dashboard</span>
+                            </p>
+                        </div>
+                        <div class="nav-link-box active-nav-link-box">
+                            <p>
+                                <i class="bi bi-eye"></i>
+                                <span>Overview</span>
+                            </p>
+                        </div>
+                        <div class="nav-link-box-acc">
+                            <div class="accordion" id="nav-link-acc-1">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="nav-link-head-1">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#nav-link-collapse-1"
+                                            aria-expanded="true" aria-controls="nav-link-collapse-1">
+                                            <p>
+                                                <i class="bi bi-bag"></i>
+                                                <span>Pickup</span>
+                                            </p>
+                                            <i class="bi bi-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div id="nav-link-collapse-1" class="accordion-collapse collapse"
+                                        aria-labelledby="nav-link-head-1" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="nav-links-secondary-box">
+                                                <div class="nav-link-box">
+                                                    <p>
+                                                        <i class="bi bi-box"></i>
+                                                        Packages
+                                                    </p>
+                                                </div>
+                                                <div class="nav-link-box">
+                                                    <p>
+                                                        <i class="bi bi-people"></i>
+                                                        Shippers
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-link-box-acc">
+                            <div class="accordion" id="nav-link-acc-2">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="nav-link-head-2">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#nav-link-collapse-2"
+                                            aria-expanded="true" aria-controls="nav-link-collapse-2">
+                                            <p>
+                                                <i class="bi bi-truck"></i>
+                                                <span> In Transit</span>
+                                            </p>
+                                            <i class="bi bi-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div id="nav-link-collapse-2" class="accordion-collapse collapse"
+                                        aria-labelledby="nav-link-head-2" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="nav-links-secondary-box">
+                                                <div class="nav-link-box">
+                                                    <p>
+                                                        <i class="bi bi-box"></i>
+                                                        Packages
+                                                    </p>
+                                                </div>
+                                                <div class="nav-link-box">
+                                                    <p>
+                                                        <i class="bi bi-basket"></i>
+                                                        Movable Units
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-link-box-acc">
+                            <div class="accordion" id="nav-link-acc-3">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="nav-link-head-3">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#nav-link-collapse-3"
+                                            aria-expanded="true" aria-controls="nav-link-collapse-3">
+                                            <p>
+                                                <i class="bi bi-shop"></i>
+                                                <span>At the Hub</span>
+                                            </p>
+                                            <i class="bi bi-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div id="nav-link-collapse-3" class="accordion-collapse collapse"
+                                        aria-labelledby="nav-link-head-3" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="nav-links-secondary-box">
+                                                <div class="nav-link-box">
+                                                    <p>
+                                                        <i class="bi bi-box"></i>
+                                                        Packages
+                                                    </p>
+                                                </div>
+                                                <div class="nav-link-box">
+                                                    <p>
+                                                        <i class="bi bi-pin-map"></i>
+                                                        Locations
+                                                    </p>
+                                                </div>
+                                                <div class="nav-link-box">
+                                                    <p>
+                                                        <i class="bi bi-recycle"></i>
+                                                        Cycle Count
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-link-box-acc">
+                            <div class="accordion" id="nav-link-acc-4">
+                                <div class="accordion-item">
+                                    <div class="accordion-header" id="nav-link-head-4">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#nav-link-collapse-4"
+                                            aria-expanded="true" aria-controls="nav-link-collapse-4">
+                                            <p>
+                                                <i class="bi bi-arrow-left-right"></i>
+                                                <span> Transfer</span>
+                                            </p>
+                                            <i class="bi bi-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                    <div id="nav-link-collapse-4" class="accordion-collapse collapse"
+                                        aria-labelledby="nav-link-head-4" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <div class="nav-links-secondary-box">
+                                                <div class="nav-link-box">
+                                                    <p>
+                                                        <i class="bi bi-truck"></i>
+                                                        Delivery Run
+                                                    </p>
+                                                </div>
+                                                <div class="nav-link-box">
+                                                    <p>
+                                                        <i class="bi bi-basket"></i>
+                                                        Movable Units
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-link-box">
+                            <p>
+                                <i class="bi bi-arrow-clockwise"></i>
+                                <span>Reconciel</span>
+                            </p>
+                        </div>
+                        <div class="nav-link-box">
+                            <p>
+                                <i class="bi bi-info-circle"></i>
+                                <span>Help</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <header>
+                <div class="header-content">
+                    <div class="header-left">
+                        <div class="navbar-open">
+                            <i class="bi bi-list"></i>
+                        </div>
+                        <div class="search-box">
+                            <i class="bi bi-search"></i>
+                            <input placeholder="Search" type="text" />
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <button class="btn-green-outlined">
+                            <i class="bi bi-box"></i> Add Packages
+                        </button>
+                        <button class="btn-gray-outlined">
+                            <i class="bi bi-upload"></i> Upload
+                        </button>
+                        <div class="user-dropdown">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <div class="user-dropdown-head">
+                                        <div class="user-dropdown-left">
+                                            <img src="../assets/img/profile-pic.png" alt="profile" />
+                                            <span>
+                                                <h6>Yassine Ghezzal</h6>
+                                                <p>FES-STATION</p>
+                                            </span>
+                                        </div>
+                                        <i class="bi bi-chevron-down"></i>
+                                    </div>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <div class="dropdown-menu-box">
+                                        <a href="#">
+                                            <i class="bi bi-arrow-left-right"></i>
+                                            Switch Hub
+                                        </a>
+                                        <a href="#">
+                                            <i class="bi bi-truck"></i>
+                                            Driver Management
+                                        </a>
+                                        <a href="#">
+                                            <i class="bi bi-shop"></i>
+                                            Shpper Management
+                                        </a>
+                                        <a href="#">
+                                            <i class="bi bi-box"></i>
+                                            Packages Editor
+                                        </a>
+                                        <a href="#">
+                                            <i class="bi bi-moon-stars"></i>
+                                            Dark Mode
+                                        </a>
+                                        <a href="#">
+                                            <i class="bi bi-info-circle"></i>
+                                            Help
+                                        </a>
+                                        <a href="#">
+                                            <i class="bi bi-box-arrow-left"></i>
+                                            logout
+                                        </a>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="page-content">
+                <div class="driver-management">
+                    <div class="driver-content-box">
+                        <div class="dc-heading-btn">
+                            <h2 class="dashboard-section-heading"><i class="bi bi-house-door-fill"></i>Pickup Packages
+                            </h2>
+                            <button class="dc-create-icon"><i class="bi bi-truck"></i>Create</button>
+                        </div>
+                        <div class="show-entry-search-box">
+                            <div class="show-entry-box">
+                                <h5>Show</h5>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>10</option>
+                                    <option value="1">20</option>
+                                    <option value="2">30</option>
+                                    <option value="3">40</option>
+                                </select>
+                                <h5>Entries</h5>
+                            </div>
+                            <div class="search-box">
+                                <i class="bi bi-search"></i>
+                                <input placeholder="Search" type="text">
+                            </div>
+                        </div>
+                        <div class="driver-manage-table">
+                            <div class="sld-table">
+                                <table class="table">
+                                    <thead class="pack-hub-thead">
+                                        <th>Tracking Number <i class="bi bi-arrow-down-up"></i>
+                                        </th>
+                                        <th>Customer Nmae <i class="bi bi-arrow-down-up"></i></th>
+                                        <th>City <i class="bi bi-arrow-down-up"></i></th>
+                                        <th>Last Update<i class="bi bi-arrow-down-up"></i></th>
+                                        <th>Updated By<i class="bi bi-arrow-down-up"></i></th>
+                                        <th>Status <i class="bi bi-arrow-down-up"></i></th>
+                                        <th>Attempts <i class="bi bi-arrow-down-up"></i></th>
+                                        <th>Shipper<i class="bi bi-arrow-down-up"></i></th>
+                                        <th>Action<i class="bi bi-arrow-down-up"></i></th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>said <br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>1 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>عبد الجليل بيكو<br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>0 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>Abderazak<br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>0 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>Zouhir<br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>0 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>Mohamed<br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>0 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>said <br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>1 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>Redouane<br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>0 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>Levy David<br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>0 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>إبراهيم<br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>0 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td-icon-y"><i class="bi bi-arrow-90deg-down"></i>SL220705150868
+                                                <br>
+                                                <h6><i class="bi bi-box"></i>sl4420</h6>
+                                            </td>
+                                            <td>عبد العزيز<br>
+                                                <h6><i class="bi bi-phone"></i>0673471046</h6>
+                                            </td>
+                                            <td>TEMARA <br>
+                                                <h6><i class="bi bi-shop"></i>3PL RABAT-FLEET</h6>
+                                            </td>
+                                            <td>2022-07-05 12:04:11<br>
+                                                <h6 class="icon-para-green"><i class="bi bi-clock"></i>4 minutes ago
+                                                </h6>
+                                            </td>
+                                            <td>Youssef FALOU
+                                            </td>
+                                            <td class="td-status-y"><span>Pending</span></td>
+                                            <td>0 Attempts</td>
+                                            <td>MENUSHOP</td>
+                                            <td class="td-diff-i">
+                                                <span class="eye-i"><i class="bi bi-eye-fill"></i></span>
+                                                <span class="pencil-i"><i class="bi bi-pencil-fill"></i></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="dm-last-box">
+                            <h5>Showing 1 to 10 of 12 entries</h5>
+                            <div class="dm-pagination-box">
+                                <div aria-label="..." class="dm-padi-main">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <span class="page-link">Previous</span>
+                                        </li>
+                                        <li class="page-item active" aria-current="page">
+                                            <span class="page-link plink-num">1</span>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </main>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.5/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+<script src="../js/gsap.js"></script>
+<script src="../js/main.js"></script>
+
+</html>
