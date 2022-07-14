@@ -4,7 +4,7 @@ const ctx = document
 const myChart = new Chart(ctx, {
   type: "bar",
   data: {
-    labels: ["January", "February", "March", "April", "May", "june"],
+    labels: ["January", "February", "March", "April"],
     datasets: [
       {
         label: "Driver 1",
@@ -130,7 +130,7 @@ const ctx3 = document.getElementById("last-12m-data-chart").getContext("2d");
 const myChart3 = new Chart(ctx3, {
   type: "bar",
   data: {
-    labels: ["January", "February", "March", "April", "May", "june"],
+    labels: ["January", "February", "March", "April"],
     datasets: [
       {
         label: "Delivered",
