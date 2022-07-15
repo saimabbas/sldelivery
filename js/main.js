@@ -4,10 +4,10 @@ const ctx = document
 const myChart = new Chart(ctx, {
   type: "bar",
   data: {
-    labels: ["January", "February", "March", "April"],
+    labels: ["January", "February", "March", "April", "May", "June"],
     datasets: [
       {
-        label: "Driver 1",
+        label: "Delivered",
         data: [12, 19, 3, 5, 2, 3],
         backgroundColor: [
           "rgba(255, 99, 132, 0.3)",
@@ -28,29 +28,8 @@ const myChart = new Chart(ctx, {
         borderWidth: 1,
       },
       {
-        label: "Driver 2",
+        label: "Cancelled",
         data: [15, 13, 5, 12, 10, 4],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.3)",
-          "rgba(54, 162, 235, 0.3)",
-          "rgba(255, 206, 86, 0.3)",
-          "rgba(75, 192, 192, 0.3)",
-          "rgba(153, 102, 255, 0.3)",
-          "rgba(255, 159, 64, 0.3)",
-        ],
-        borderColor: [
-          "rgba(255, 99, 132, 0)",
-          "rgba(54, 162, 235, 0)",
-          "rgba(255, 206, 86, 0)",
-          "rgba(75, 192, 192, 0)",
-          "rgba(153, 102, 255, 0)",
-          "rgba(255, 159, 64, 0)",
-        ],
-        borderWidth: 1,
-      },
-      {
-        label: "Driver 3",
-        data: [10, 4, 15, 5, 10, 12],
         backgroundColor: [
           "rgba(255, 99, 132, 0.3)",
           "rgba(54, 162, 235, 0.3)",

@@ -120,6 +120,20 @@ button {
   box-shadow: 0 0 0 3px rgba(0, 152, 101, 0.25);
   background-color: rgba(0, 0, 0, 0.035);
 }
+.sld-scrollbar {
+  width: 100%;
+  padding: 0 0px 0 0;
+}
+.sld-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+.sld-scrollbar::-webkit-scrollbar-track {
+  border-radius: 1000px;
+}
+.sld-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 1000px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
 /* LIGHT-DARK THEME */
 .light-theme {
   --main-blue: #20254a;
@@ -558,6 +572,17 @@ nav:hover > .nav-content {
   margin: 0 0 2.5rem 0;
   color: var(--main-blue);
 }
+.select-grid-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  margin: 0 0 2.5rem 0;
+}
+.select-grid-box select {
+  width: 100%;
+}
 .d-overview-grid {
   width: 100%;
   display: grid;
@@ -623,6 +648,19 @@ nav:hover > .nav-content {
 .dcc-lov select {
   width: 20rem;
   margin: 0 0 2.5rem 0;
+}
+.sld-table-scrollable {
+  width: 100%;
+  max-height: 35rem;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.sld-table-scrollable thead {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-main-2);
 }
 .sld-table th {
   font-size: 1.5rem;
