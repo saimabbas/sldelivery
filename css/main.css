@@ -30,6 +30,30 @@ button {
   min-height: 100vh;
   background-color: var(--main-bg);
 }
+.navbar-closed {
+  display: none;
+}
+/* LIGHT-DARK THEME */
+.light-theme {
+  --main-blue: #20254a;
+  --main-green: #009866;
+  --main-bg: #f7f8f9;
+  --bg-main-2: #fff;
+  --text-color-1: #20254a;
+  --black005-black025: rgba(0, 0, 0, 0.05);
+  --border-color: rgba(0, 0, 0, 0.15);
+  --box-shadow: rgba(0, 0, 0, 0.05);
+}
+.dark-theme {
+  --main-blue: #20254a;
+  --main-green: #009866;
+  --main-bg: #191d31;
+  --bg-main-2: #1f2335;
+  --text-color-1: #f1f2f3;
+  --black005-black025: rgba(0, 0, 0, 0.15);
+  --box-shadow: rgba(0, 0, 0, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+}
 .overflow-bar::-webkit-scrollbar {
   width: 1rem;
 }
@@ -85,8 +109,8 @@ button {
   font-size: 1.5rem;
   padding: 0.65rem 1.5rem;
   border: 0;
-  background-color: rgba(0, 0, 0, 0.05);
-  color: #000;
+  background-color: var(--black005-black025);
+  color: var(--text-color-1);
   border-radius: 0.5rem;
   transition: var(--trns2);
 }
@@ -104,9 +128,9 @@ button {
 }
 .lsd-input {
   outline: 0;
-  background-color: rgba(0, 0, 0, 0.035);
+  background-color: var(--black005-black025);
   font-size: 1.5rem;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   padding: 1rem 1rem;
   border-radius: 0.5rem;
   border: 0;
@@ -114,11 +138,11 @@ button {
   width: 100%;
 }
 .lsd-input:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: var(--black005-black025);
 }
 .lsd-input:focus {
   box-shadow: 0 0 0 3px rgba(0, 152, 101, 0.25);
-  background-color: rgba(0, 0, 0, 0.035);
+  background-color: var(--black005-black025);
 }
 .sld-scrollbar {
   width: 100%;
@@ -132,20 +156,20 @@ button {
 }
 .sld-scrollbar::-webkit-scrollbar-thumb {
   border-radius: 1000px;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: var(--border-color);
 }
-/* LIGHT-DARK THEME */
-.light-theme {
-  --main-blue: #20254a;
-  --main-green: #009866;
-  --main-bg: #f7f8f9;
-  --bg-main-2: #fff;
+
+.header-right .dropdown-menu p.to-lightmode-btn {
+  display: none;
+}
+.header-right .dropdown-menu p.to-darkmode-btn {
+  display: flex;
 }
 /* HEADER */
 header {
   width: 100%;
   padding: 0 3.5rem 0 26.5rem;
-  background-color: #fff;
+  background-color: var(--bg-main-2);
   top: 0;
   left: 0;
   position: fixed;
@@ -164,9 +188,10 @@ header {
   align-items: center;
   justify-content: flex-start;
 }
-.navbar-open {
+.navbar-btn {
   font-size: 2.25rem;
   margin: 0 1.5rem 0 0;
+  color: var(--text-color-1);
 }
 .search-box {
   background-color: var(--main-bg);
@@ -180,21 +205,17 @@ header {
 .search-box i {
   font-size: 2rem;
   margin: 0 1rem;
-  color: rgba(0, 0, 0, 0.5);
-  transition: var(--trns2);
+  color: var(--text-color-1);
 }
 .search-box input {
   width: 100%;
   border: 0;
   font-size: 1.5rem;
   background-color: unset;
-  color: var(--main-blue);
+  color: var(--text-color-1);
 }
 .search-box input::placeholder {
-  color: rgba(0, 0, 0, 0.5);
-}
-.search-box:focus-within i {
-  color: var(--main-blue);
+  color: var(--text-color-1);
 }
 .header-right {
   width: max-content;
@@ -228,18 +249,22 @@ header {
   min-width: 100%;
   padding: 0.75rem;
   width: max-content;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 5px var(--black005-black025);
   border-radius: 0.5rem;
+  background-color: var(--bg-main-2);
+  color: var(--text-color-1);
 }
 .dropdown-menu-box {
   width: 1005;
   display: grid;
   grid-template-columns: 1fr;
 }
-.header-right .dropdown-menu a {
+.header-right .dropdown-menu a,
+.header-right .dropdown-menu p {
   font-size: 1.5rem;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   text-decoration: none;
+  cursor: pointer;
   transition: var(--trns1);
   min-height: 4.25rem;
   border-radius: 0.5rem;
@@ -253,7 +278,8 @@ header {
   margin: 0 1rem 0 0;
   font-size: 1.75rem;
 }
-.header-right .dropdown-menu a:hover {
+.header-right .dropdown-menu a:hover,
+.header-right .dropdown-menu p:hover {
   color: var(--main-green);
   background-color: rgba(0, 152, 101, 0.1);
 }
@@ -292,14 +318,14 @@ header {
 .user-dropdown-left span h6 {
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   margin: 0;
   transition: var(--trns1);
 }
 .user-dropdown-left span p {
   font-size: 1.15rem;
   font-weight: 400;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   opacity: 0.65;
   margin: 0;
 }
@@ -309,7 +335,7 @@ header {
 }
 .header-right > i {
   font-size: 2rem;
-  color: var(--main-blue);
+  color: var(--text-color-1);
 }
 /* NAV */
 nav {
@@ -318,7 +344,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: var(--bg-main-2);
   z-index: 11;
 }
 .nav-content {
@@ -327,8 +353,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  transition: var(--trns2);
-  background-color: #fff;
+  background-color: var(--bg-main-2);
 }
 .nav-top {
   width: 100%;
@@ -348,7 +373,7 @@ nav {
 .sld-logo-box span {
   margin: 0 0 0 0.5rem;
   font-size: 2rem;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   font-weight: 600;
 }
 .nav-links-container {
@@ -402,15 +427,19 @@ nav .accordion {
   justify-content: flex-start;
   font-size: 1.6rem;
   margin: 0;
+  color: var(--text-color-1);
 }
 .nav-link-box p i {
   font-size: 2rem;
+  color: var(--text-color-1);
 }
 .nav-link-box p span {
   margin: 0 0 0 1rem;
+  color: var(--text-color-1);
 }
 .nav-link-box > i {
   font-size: 1.35rem;
+  color: var(--text-color-1);
 }
 .nav-link-box.active-nav-link-box {
   background-color: rgba(0, 152, 101, 0.1);
@@ -453,15 +482,18 @@ nav .accordion {
   justify-content: flex-start;
   font-size: 1.6rem;
   margin: 0;
+  color: var(--text-color-1);
 }
 .nav-link-box-acc button p i {
   font-size: 2rem;
   margin: 0 1rem 0 0;
+  color: var(--text-color-1);
 }
 .nav-link-box-acc button > i {
   font-size: 1.35rem;
   transform: rotate(-90deg);
-  transition: var(--trns2);
+  transition: var(--trns1);
+  color: var(--text-color-1);
 }
 .nav-link-box.active-nav-link-box {
   background-color: rgba(0, 152, 101, 0.1);
@@ -558,7 +590,7 @@ nav:hover > .nav-content {
   width: 100%;
   padding: 2.5rem;
   border-radius: 1rem;
-  background-color: #fff;
+  background-color: var(--bg-main-2);
 }
 .d-overview-section,
 .d-logistics-cost-section,
@@ -570,7 +602,7 @@ nav:hover > .nav-content {
   font-size: 2.25rem;
   font-weight: 600;
   margin: 0 0 2.5rem 0;
-  color: var(--main-blue);
+  color: var(--text-color-1);
 }
 .select-grid-box {
   width: 100%;
@@ -622,8 +654,8 @@ nav:hover > .nav-content {
   background-color: rgba(0, 152, 101, 0.085);
 }
 .d-overview-grid-card:nth-child(4) {
-  background-color: rgba(32, 37, 74, 0.085);
-  color: rgba(32, 37, 74, 0.75);
+  color: rgba(255, 0, 111, 0.75);
+  background-color: rgba(255, 0, 111, 0.085);
 }
 .d-overview-grid-card:nth-child(5) {
   background-color: rgba(231, 111, 81, 0.085);
@@ -638,8 +670,8 @@ nav:hover > .nav-content {
   color: rgba(10, 148, 150, 0.75);
 }
 .d-overview-grid-card:nth-child(8) {
-  background-color: rgba(88, 47, 14, 0.085);
-  color: rgba(88, 47, 14, 0.75);
+  color: rgba(255, 190, 11, 0.75);
+  background-color: rgba(255, 190, 11, 0.085);
 }
 .ddd-lov select {
   width: 35%;
@@ -662,9 +694,12 @@ nav:hover > .nav-content {
   top: 0;
   background-color: var(--bg-main-2);
 }
+.sld-table * {
+  border-color: var(--border-color);
+}
 .sld-table th {
   font-size: 1.5rem;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   font-weight: 700;
 }
 .sld-table .td-yellow {
@@ -690,7 +725,7 @@ nav:hover > .nav-content {
 }
 .sld-table td {
   font-size: 1.5rem;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   font-weight: 400;
 }
 /* .sld-table .table > :not(caption) > * > * {
@@ -708,7 +743,7 @@ nav:hover > .nav-content {
 }
 .sld-table-formula h5 {
   font-size: 1.6rem;
-  color: #000;
+  color: var(--text-color-1);
   font-weight: 500;
   margin: 0 0 1.5rem 0;
 }
@@ -744,6 +779,10 @@ nav:hover > .nav-content {
   align-items: center;
   justify-content: center;
 }
+.fccr img {
+  width: 30rem;
+  object-fit: contain;
+}
 .sld-slogan {
   margin: 1rem 0 0 0;
   font-size: 1.25rem;
@@ -772,7 +811,11 @@ nav:hover > .nav-content {
 .sld-input-box label {
   font-size: 1.5rem;
   margin: 0 0 0.25rem 0;
+  color: var(--text-color-1);
   display: block;
+}
+.form-check label {
+  color: var(--text-color-1);
 }
 .login-box .form-check {
   font-size: 1.5rem;
@@ -781,7 +824,7 @@ nav:hover > .nav-content {
   font-size: 1.5rem;
   width: 100%;
   text-align: center;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   transition: var(--trns1);
   margin: 0;
 }
@@ -806,7 +849,7 @@ nav:hover > .nav-content {
   width: 100%;
   padding: 2.5rem;
   border-radius: 1rem;
-  background-color: #fff;
+  background-color: var(--bg-main-2);
 }
 .dc-heading-btn {
   display: flex;
@@ -819,7 +862,7 @@ nav:hover > .nav-content {
   justify-content: center;
   align-items: center;
   padding: 0.5rem 1.25rem;
-  background-color: #062544;
+  background-color: var(--main-green);
   border-radius: 0.5rem;
   font-size: 1.5rem;
   font-weight: 500;
@@ -830,10 +873,6 @@ nav:hover > .nav-content {
   font-size: 2rem;
   color: #fff;
   margin: 0 0.75rem 0 0;
-}
-.dc-create-icon:hover {
-  background-color: rgba(6, 37, 68, 0.9);
-  transition: 0.5s;
 }
 .show-entry-search-box {
   display: flex;
@@ -849,15 +888,15 @@ nav:hover > .nav-content {
 }
 .show-entry-box h5 {
   font-size: 1.5rem;
-  color: #000;
+  color: var(--text-color-1);
   font-weight: 500;
 }
 .show-entry-box select {
   outline: 0;
-  background-color: rgba(0, 0, 0, 0.035);
+  background-color: var(--black005-black025);
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   border: 0;
@@ -866,9 +905,12 @@ nav:hover > .nav-content {
   width: 15%;
 }
 .show-entry-box select option {
+  background-color: var(--bg-main-2);
+}
+.show-entry-box select option {
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--main-blue);
+  color: var(--text-color-1);
 }
 .se-search-box {
   display: flex;
@@ -1032,7 +1074,7 @@ tr span i {
 }
 .dm-last-box h5 {
   font-size: 1.5rem;
-  color: #000;
+  color: var(--text-color-1);
   font-weight: 500;
 }
 .dm-last-box .dm-padi-main .pagination {
@@ -1043,6 +1085,14 @@ tr span i {
   font-size: 1.5rem;
   color: #6c757d;
   cursor: pointer;
+}
+.page-link {
+  background-color: var(--bg-main-2);
+  border-color: var(--border-color);
+}
+.page-link:hover {
+  background-color: var(--black005-black025);
+  border-color: var(--border-color);
 }
 .dm-last-box .dm-padi-main .pagination .page-link.plink-num {
   color: #fff;
@@ -1059,7 +1109,7 @@ tr span i {
 /* SWITCH HUB PAGE  */
 .dashboard-section-heading i {
   font-size: 2rem;
-  color: #000;
+  color: var(--text-color-1);
   margin: 0 0.5rem 0 0;
 }
 .show-entry-search-box-a {
@@ -1076,7 +1126,7 @@ tr span i {
   padding: 0.65rem 1.5rem;
   border: 0;
   background-color: var(--main-green);
-  color: #fff;
+  color: var(--bg-main-2);
   border-radius: 0.5rem;
   height: max-content;
   transition: var(--trns2);
@@ -1098,7 +1148,7 @@ tr span i {
 }
 .search-select-heading h5 {
   font-size: 1.5rem;
-  color: #000;
+  color: var(--text-color-1);
   font-weight: 500;
   margin: 0 0 1rem 0;
 }
@@ -1107,10 +1157,10 @@ tr span i {
 }
 .search-select-heading select {
   outline: 0;
-  background-color: rgba(0, 0, 0, 0.035);
+  background-color: var(--black005-black025);
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--main-blue);
+  color: var(--text-color-1);
   padding: 0.85rem 1rem;
   border-radius: 0.5rem;
   border: 0;
@@ -1119,7 +1169,7 @@ tr span i {
 .search-select-heading select option {
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--main-blue);
+  color: var(--text-color-1);
 }
 
 /* PACKAGEHUB PAGE  */
@@ -1139,13 +1189,13 @@ tr span i {
   margin: 0 0.75rem 0 0;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--bg-main-2);
   border: unset;
   cursor: not-allowed;
 }
 .hub-pack-btn .quest-btn i {
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--bg-main-2);
   margin: 0 0.75rem 0 0;
 }
 .hub-pack-btn .quest-btn:hover {
@@ -1162,21 +1212,21 @@ tr span i {
   margin: 0 0.75rem 0 0;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--bg-main-2);
   border: unset;
   cursor: pointer;
   width: 10rem;
 }
 .hub-pack-btn option i {
   font-size: 2rem;
-  color: #fff;
+  color: var(--bg-main-2);
   margin: 0 0.75rem 0 0;
 }
 .hub-pack-btn select option {
   font-size: 1.5rem;
   font-weight: 500;
-  color: #000;
-  background-color: #fff;
+  color: var(--text-color-1);
+  background-color: var(--bg-main-2);
 }
 .hub-pack-btn .quest-btn:hover {
   background-color: rgba(6, 37, 68, 0.9);
@@ -1234,8 +1284,8 @@ tr span i {
   width: 100%;
   padding: 2.5rem;
   border-radius: 1rem;
-  background-color: #fff;
-  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  background-color: var(--bg-main-2);
+  box-shadow: 0px 0 15px var(--box-shadow);
   height: 100%;
 }
 .cc-heading-btn h2 {
@@ -1262,8 +1312,8 @@ tr span i {
   height: max-content;
   padding: 2.5rem;
   border-radius: 1rem;
-  background-color: #fff;
-  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+  background-color: var(--bg-main-2);
+  box-shadow: 0px 0 15px var(--box-shadow);
 }
 .cycle-num-grid {
   display: grid;
@@ -1278,20 +1328,20 @@ tr span i {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: rgba(0, 0, 0, 0.035);
+  background-color: var(--black005-black025);
   border-radius: 1rem;
   width: 100%;
   padding: 2rem;
 }
 .cyc-num-gbox h5 {
   font-size: 1.65rem;
-  color: #000;
+  color: var(--text-color-1);
   font-weight: 500;
   margin: 0;
 }
 .cyc-num-gbox span {
   font-size: 3rem;
-  color: #000;
+  color: var(--text-color-1);
   font-weight: 600;
   margin: 0.25rem 0 0 0;
 }

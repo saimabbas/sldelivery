@@ -1,3 +1,41 @@
+const toDarkMode = () => {
+  $(".to-darkmode-btn").css({ display: "none" });
+  $(".to-lightmode-btn").css({ display: "flex" });
+  $(".app").removeClass("light-theme");
+  $(".app").addClass("dark-theme");
+};
+const toLightMode = () => {
+  $(".to-lightmode-btn").css({ display: "none" });
+  $(".to-darkmode-btn").css({ display: "flex" });
+  $(".app").removeClass("dark-theme");
+  $(".app").addClass("light-theme");
+};
+const collapseNav = () => {
+  $(".nav-content span, .nav-content .accordion-button > i").css({
+    display: "none",
+  });
+  $(".navbar-opened").css({ display: "none" });
+  $(".navbar-closed").css({ display: "block" });
+  $(".nav-content").css({ width: "9rem" });
+  $(".nav-link-box").css({ justifyContent: "center" });
+  $(".nav-link-box-acc").css({ justifyContent: "center" });
+  $(".sld-logo-box").css({ justifyContent: "center" });
+  $(".page-content").css({ padding: "10.5rem 3.5rem 3.5rem 11.5rem" });
+  $("header").css({ padding: "0 3.5rem 0 11.5rem" });
+};
+const openNav = () => {
+  $(".nav-content span, .nav-content .accordion-button > i").css({
+    display: "block",
+  });
+  $(".nav-content").css({ width: "25rem" });
+  $(".navbar-opened").css({ display: "block" });
+  $(".navbar-closed").css({ display: "none" });
+  $(".nav-link-box").css({ justifyContent: "space-between" });
+  $(".nav-link-box-acc").css({ justifyContent: "space-between" });
+  $(".sld-logo-box").css({ justifyContent: "flex-start" });
+  $(".page-content").css({ padding: "10.5rem 3.5rem 3.5rem 28.5rem" });
+  $("header").css({ padding: "0 3.5rem 0 26.5rem" });
+};
 const ctx = document
   .getElementById("driver-data-ranking-chart")
   .getContext("2d");

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="app light-theme">
+    <div class="app dark-theme">
         <main class="page">
             <nav>
                 <div class="nav-content">
@@ -202,74 +202,92 @@
             </nav>
             <header>
                 <div class="header-content">
-                    <div class="header-left">
-                        <div class="navbar-open">
-                            <i class="bi bi-list"></i>
-                        </div>
-                        <div class="search-box">
-                            <i class="bi bi-search"></i>
-                            <input placeholder="Search" type="text" />
-                        </div>
+                  <div class="header-left">
+                    <div class="navbar-btn navbar-opened" onclick="collapseNav()">
+                      <i class="bi bi-list"></i>
                     </div>
-                    <div class="header-right">
-                        <button class="btn-green-outlined">
-                            <i class="bi bi-box"></i> Add Packages
-                        </button>
-                        <button class="btn-gray-outlined">
-                            <i class="bi bi-upload"></i> Upload
-                        </button>
-                        <div class="user-dropdown">
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <div class="user-dropdown-head">
-                                        <div class="user-dropdown-left">
-                                            <img src="../assets/img/profile-pic.png" alt="profile" />
-                                            <span>
-                                                <h6>Yassine Ghezzal</h6>
-                                                <p>FES-STATION</p>
-                                            </span>
-                                        </div>
-                                        <i class="bi bi-chevron-down"></i>
-                                    </div>
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                    <div class="dropdown-menu-box">
-                                        <a href="#">
-                                            <i class="bi bi-arrow-left-right"></i>
-                                            Switch Hub
-                                        </a>
-                                        <a href="#">
-                                            <i class="bi bi-truck"></i>
-                                            Driver Management
-                                        </a>
-                                        <a href="#">
-                                            <i class="bi bi-shop"></i>
-                                            Shpper Management
-                                        </a>
-                                        <a href="#">
-                                            <i class="bi bi-box"></i>
-                                            Packages Editor
-                                        </a>
-                                        <a href="#">
-                                            <i class="bi bi-moon-stars"></i>
-                                            Dark Mode
-                                        </a>
-                                        <a href="#">
-                                            <i class="bi bi-info-circle"></i>
-                                            Help
-                                        </a>
-                                        <a href="#">
-                                            <i class="bi bi-box-arrow-left"></i>
-                                            logout
-                                        </a>
-                                    </div>
-                                </ul>
+                    <div class="navbar-btn navbar-closed" onclick="openNav()">
+                      <i class="bi bi-list"></i>
+                    </div>
+                    <div class="search-box">
+                      <i class="bi bi-search"></i>
+                      <input placeholder="Search" type="text" />
+                    </div>
+                  </div>
+                  <div class="header-right">
+                    <button class="btn-green-outlined">
+                      <i class="bi bi-box"></i> Add Packages
+                    </button>
+                    <button class="btn-gray-outlined">
+                      <i class="bi bi-upload"></i> Upload
+                    </button>
+                    <div class="user-dropdown">
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-secondary dropdown-toggle"
+                          type="button"
+                          id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <div class="user-dropdown-head">
+                            <div class="user-dropdown-left">
+                              <img
+                                src="../assets/img/profile-pic.png"
+                                alt="profile"
+                              />
+                              <span>
+                                <h6>Yassine Ghezzal</h6>
+                                <p>FES-STATION</p>
+                              </span>
                             </div>
-                        </div>
+                            <i class="bi bi-chevron-down"></i>
+                          </div>
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMenuButton1"
+                        >
+                          <div class="dropdown-menu-box">
+                            <a href="#">
+                              <i class="bi bi-arrow-left-right"></i>
+                              Switch Hub
+                            </a>
+                            <a href="#">
+                              <i class="bi bi-truck"></i>
+                              Driver Management
+                            </a>
+                            <a href="#">
+                              <i class="bi bi-shop"></i>
+                              Shpper Management
+                            </a>
+                            <a href="#">
+                              <i class="bi bi-box"></i>
+                              Packages Editor
+                            </a>
+                            <p class="to-darkmode-btn" onclick="toDarkMode()">
+                              <i class="bi bi-moon-stars"></i>
+                              Dark Mode
+                            </p>
+                            <p class="to-lightmode-btn" onclick="toLightMode()">
+                              <i class="bi bi-brightness-high"></i>
+                              Light Mode
+                            </p>
+                            <a href="#">
+                              <i class="bi bi-info-circle"></i>
+                              Help
+                            </a>
+                            <a href="#">
+                              <i class="bi bi-box-arrow-left"></i>
+                              logout
+                            </a>
+                          </div>
+                        </ul>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </header>
+              </header>
             <section class="page-content">
                 <div class="driver-management">
                     <div class="driver-content-box">
