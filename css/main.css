@@ -598,6 +598,9 @@ nav:hover > .nav-content {
 .d-last-12-months-section {
   grid-column: 1/-1;
 }
+.d-last-12-months-section .select-grid-box {
+  max-width: 50rem;
+}
 .dashboard-section-heading {
   font-size: 2.25rem;
   font-weight: 600;
